@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <!-- Image and text -->
+    <div class="container">
+        <a class="navbar-brand" href="/">
+            <img src="/img/logo_white.png" width="50" height="50" class="d-inline-block align-center" alt="Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                {{#if user}}
+                    <li class="nav-item">
+                        <a class="nav-link usr" href="/profile"> {{user.username}} </a>
+                    </li>
+                    {{#is_admin user}}
+                        <li class="nav-item">
+                            <a class="nav-link" href="/posts">Publications</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/create_post">Publish</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Admin Stuff
+                            </a>
+                            <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="nav-link" href="/signup">Add New Profile</a>
+                                <a class="nav-link" href="/posts/deleted">Deleted Posts</a>
+                                <a href="nav-link" href="/active_users">Active Users</a>
+                            </div>
+                        </li>
+                    {{/is_admin}}
+                    <li class="nav-item">
+                        <a class="nav-link" href="/logout">Log Out</a>
+                    </li>
+                {{else}}
+                    <li class="nav-item">
+                        <a class="nav-link" href="/signin">Sign In</a>
+                    </li>
+                {{/if}}
+            </ul>
+        </div>
+    </div>
+</nav>

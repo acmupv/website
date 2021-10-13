@@ -1,0 +1,113 @@
+body, .body {
+    background-color: #F8F9FA;
+    height: 100vh!important;
+    width: 100%;
+}
+
+.navbar {
+    width: 100%;
+    position: fixed!important;
+    z-index: 100;
+    background-color: black!important;
+}
+
+.msg {
+    z-index: 999!important;
+    margin: 0 auto;
+    margin-top: 5em;
+    position: fixed;
+    top: 0em!important;
+}
+
+.navbar a {
+    color: white!important;
+}
+
+.navbar a:hover {
+    color: gray!important;
+}
+
+.footer {
+    position: relative;
+    background-color: black;
+    height: 4em;
+    width: 100%;
+    margin: 0 auto;
+    bottom: 0;
+    left: 0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.data { 
+    margin-top: 4em;
+}
+
+.card {
+    margin-top: 15px;
+}
+
+.space {
+    margin-top: 3em;
+}
+
+.profile_img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%!important;
+}
+
+.profile_img_admin {
+    -webkit-box-shadow: 0px 0px 20px 5px rgba(138,0,138,0.6);
+    -moz-box-shadow: 0px 0px 20px 5px rgba(138,0,138,0.6);
+    box-shadow: 0px 0px 20px 5px rgba(138,0,138,0.6);
+    border-radius: 50%;
+}
+
+.profile_img_collaborator {
+    -webkit-box-shadow: 0px 0px 20px 5px rgba(0, 110, 184, 0.6);
+    -moz-box-shadow: 0px 0px 20px 5px rgba(0, 110, 184, 0.6);
+    box-shadow: 0px 0px 20px 5px rgba(0, 110, 184, 0.6);
+    border-radius: 50%;
+}
+
+.spider_web {
+    width: 200px;
+    height: auto;
+}
+
+.card_title {
+    font-weight: bold;
+    font-size: 1.2em;
+    letter-spacing: 0.1em;
+}
+
+.card_body {
+    font-size: 1em;
+}
+
+.card_publi {
+    font-style: italic;
+    font-size: 0.7em;
+}
+
+.material-icons.blue { color: #a400aa; }
+
+.gray {
+    color: #797979;
+    font-size: 0.6em;
+    margin: 5px;
+}
+
+.in_row {
+    display: flex;
+    flex-direction: row!important;
+    justify-content: center;
+}
+
+.usr {
+    color: gray;
+}
+

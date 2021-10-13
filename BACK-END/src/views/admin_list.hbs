@@ -1,0 +1,54 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-12 mx-auto">
+            <div class="card text-center">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12 mx-auto">
+                            <h5><b>Active Users:</b> {{count}} </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        {{#each users}}
+            <div class="col-md-12">
+                <div class="card text-center">
+                    <div class="card-body">
+                       <div class="row">
+                            <div class="col-md-6 col-sm-12 mx-auto">
+                                <img src="{{image_url}}" alt="Logo" class="{{#role_color role}}{{/role_color}} card-img-top m-2 rounded-circle profile_img">
+                            </div>
+                            <div class="col-md-6 col-sm-12 mx-auto text-left">
+                                <h5><b>Name:</b> {{name}} </h5>
+                                <h5><b>Description:</b> {{description}} </h5>
+                                <hr>
+                                <h5><b>Username:</b> {{username}} </h5>
+                                <h5><b>Email:</b> {{email}} </h5>
+                                <h5><b>Role:</b> {{role}} </h5>
+                            </div>
+                        </div>
+                        <!-- Button trigger modal -->
+                    </div>
+                </div>
+            </div>
+        {{else}}
+        <div class="col-md-12 mx-auto">
+            <div class="card card-body text-center">
+                <p>For ever alone :).</p>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
+
+<script>
+    // Delete post Script
+    function sure_about(id) {
+        if(confirm("Do you really want to delete this user?")){
+            window.location.href = "/delete/user/" + id
+        }
+    }
+</script>

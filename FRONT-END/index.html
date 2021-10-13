@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ACM UPV Chapter</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./src/style.css" />
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/typewriter-effect@2.3.1/dist/core.js"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <div class="nav" id="nav">
+      <div class="menu" id="navmenu"></div>
+      <a href="https://acmupv.webs.upv.es/" class="logo"
+        >acm<span>UPV Chapter</span></a
+      >
+      <div class="pages">
+        <a href="/equipo">Equipo</a>
+        <a href="/woman">ACM Woman</a>
+        <a href="/blog">Blog y Eventos</a>
+        <a href="#newsletterForm" class="cta">Inscribirme</a>
+      </div>
+    </div>
+    <div class="menuoverlay" id="menuoverlay">
+      <div class="menuoverlayclose" id="menuoverlayclose"></div>
+      <a href="/equipo" class="nth-child-1 page">Equipo</a><br />
+      <a href="/woman" class="nth-child-2 page">ACM Woman</a><br />
+      <a href="/blog" class="nth-child-3 page">Blog y Eventos</a><br />
+      <div class="nth-child-4 sep"></div>
+      <br />
+      <a href="#newsletterForm" onclick="document.getElementById('menuoverlayclose').click()" class="nth-child-5 cta"
+        ><ion-icon name="mail-outline"></ion-icon> Inscribirme</a
+      ><br />
+      <a
+        href="https://www.instagram.com/acmupv/"
+        target="_blank"
+        class="nth-child-6 social instagram"
+        ><ion-icon name="logo-instagram"></ion-icon
+      ></a>
+      <a
+        href="https://twitter.com/acmupv"
+        target="_blank"
+        class="nth-child-7 social twitter"
+        ><ion-icon name="logo-twitter"></ion-icon
+      ></a>
+      <a
+        href="https://www.facebook.com/AcmUpv/"
+        target="_blank"
+        class="nth-child-8 social facebook"
+        ><ion-icon name="logo-facebook"></ion-icon
+      ></a>
+    </div>
+    <main>
+      <section class="hero">
+        <div class="content">
+          <img
+            class="grid"
+            src="https://raw.githubusercontent.com/SrVladyslav/ACM-UPV-Chapter/master/FRONT-END/src/img/grid.png"
+          />
+          <img
+            class="heroImage"
+            src="https://raw.githubusercontent.com/SrVladyslav/ACM-UPV-Chapter/master/FRONT-END/src/img/Hero%20(2).png"
+          />
+          <div class="heroCenterHorizontal">
+            <h1 class="heroTitle" style="margin-bottom: 4rem;">
+              Investigamos y <br />divulgamos sobre<br />
+              <span class="typewrite" id="typewrite">computación</span>
+            </h1>
+            <a href="" class="button shadow"
+              >Ver video <ion-icon class="big" name="play-circle"></ion-icon
+            ></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="courses">
+        <div class="content">
+          <div class="wave in"></div>
+
+          <h1>
+            Eventos, charlas y talleres
+          </h1>
+          <div class="coursesGrid">
+            <a href="" class="course">
+              <div
+                class="image"
+                style="
+                  background-image: url(https://images.unsplash.com/photo-1581287053822-fd7bf4f4bfec?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2577&q=80);
+                "
+              ></div>
+              <p class="title">
+                La importancia de la UI y UX en la satisfacción del usuario
+              </p>
+              <p class="date">12 de Octubre</p>
+              <p href="" class="cta">
+                Reservar plaza
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+              </p>
+            </a>
+
+            <a href="" class="course">
+              <div
+                class="image"
+                style="
+                  background-image: url(https://images.unsplash.com/photo-1534670007418-fbb7f6cf32c3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80);
+                "
+              ></div>
+              <p class="title">
+                Diseño web para noobs, principios, ejemplos y buenas prácticas
+              </p>
+              <p class="date">23 de Noviembre</p>
+              <p href="" class="cta">
+                Reservar plaza
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+              </p>
+            </a>
+
+            <a href="" class="course">
+              <div
+                class="image"
+                style="
+                  background-image: url(https://images.unsplash.com/photo-1562408590-e32931084e23?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjF9&auto=format&fit=crop&w=2250&q=80);
+                "
+              ></div>
+              <p class="title">
+                Un vistazo al futuro de la computación con Elon Musk
+              </p>
+              <p class="date">6 de Diciembre</p>
+              <p href="" class="cta">
+                Reservar plaza
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+              </p>
+            </a>
+
+            <a href="" class="course">
+              <div
+                class="image"
+                style="
+                  background-image: url(https://images.unsplash.com/photo-1556656793-08538906a9f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80);
+                "
+              ></div>
+              <p class="title">
+                Taller de desarrollo en Swift, tu primera app para iOS
+              </p>
+              <p class="date">19 de Enero</p>
+              <p href="" class="cta">
+                Reservar plaza
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+              </p>
+            </a>
+
+            <a href="" class="course">
+              <div
+                class="image"
+                style="
+                  background-image: url(https://images.unsplash.com/photo-1526738549149-8e07eca6c147?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2125&q=80);
+                "
+              ></div>
+              <p class="title">
+                Cómo minimizar el eWaste en un mundo reinado por el eWaste
+              </p>
+              <p class="date">2 de Febrero</p>
+              <p href="" class="cta">
+                Reservar plaza
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+              </p>
+            </a>
+
+            <a href="" class="course">
+              <div
+                class="image"
+                style="
+                  background-image: url(https://images.unsplash.com/photo-1531746790731-6c087fecd65a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1990&q=80);
+                "
+              ></div>
+              <p class="title">
+                Cómo mejorar la eficiencia de las Smart Cities de la mano de ML
+              </p>
+              <p class="date">15 de Marzo</p>
+              <p href="" class="cta">
+                Reservar plaza
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+              </p>
+            </a>
+          </div>
+
+          <div class="wave out"></div>
+
+          <h1 style="padding-top: 8rem;" id="newsletterForm">¿No quieres perderte ningún evento?</h1>
+          <div class="inline-grid" style="margin: 6rem 0 3rem 0;">
+            <div class="inline-50">
+              <p>
+                <b>¡Que no cunda el pánico!</b><br />Dejanos tu nombre y correo,
+                nosotros nos encargamos de enviarte un recordatorio con todos
+                los eventos del mes.
+              </p>
+              <p class="default">
+                Así serás el primero en saber los concursos, talleres y charlas
+                que tenemos entre manos.
+              </p>
+            </div>
+            <div class="inline-50" style="margin-bottom: -4rem;">
+              <form>
+                <div class="group">
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    spellcheck="false"
+                    required
+                  />
+                  <label for="name" id="default">Nombre</label>
+                </div>
+                <div class="group">
+                  <input
+                    type="mail"
+                    id="mail"
+                    name="mail"
+                    spellcheck="false"
+                    required
+                  />
+                  <label for="mail" id="default">Tu mejor correo</label>
+                </div>
+                <div class="group">
+                  <input type="submit" id="submit" value="Inscribirme" />
+                  <label for="submit" id="submit"
+                    ><ion-icon name="mail-outline"></ion-icon>
+                    Inscribirme</label
+                  >
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section style="margin-top: -14rem;">
+        <div class="content">
+          <h1>Somos curiosos como tú</h1>
+          <div class="inline-grid team-grid" style="margin: 6rem 0 3rem 0;">
+            <a href="/equipo" class="tl"></a>
+            <div class="p1">
+              <p>
+                El equipo está formado por estudiantes que investigan y divulgan
+                junto a expertos en materia de la computación, interfaces,
+                machine learning, inteligencia artificial y mucho más.
+              </p>
+            </div>
+            <div class="p2">
+              <p>
+                Nos encanta hacer <a href="">talleres, charlas y eventos</a> en
+                los que los invitados participen de forma activa, así todos
+                aprendemos.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="footer">
+        <div class="content">
+          <div class="inline-block align-top" style="margin-right: 6rem;">
+            <p class="title">Información</p>
+            <a href="/equipo">Equipo</a>
+            <a href="/woman">ACM Woman</a>
+            <a href="/blog">Blog y Eventos</a>
+            <a href="/faq">FAQ</a>
+          </div>
+          <div class="inline-block align-top" style="margin-right: 6rem;">
+            <p class="title">Contacto</p>
+            <a href="https://www.instagram.com/acmupv/" target="_blank"
+              >Instagram</a
+            >
+            <a href="https://twitter.com/acmupv" target="_blank">Twitter</a>
+            <a href="https://www.facebook.com/AcmUpv/" target="_blank"
+              >Facebook</a
+            >
+          </div>
+          <br>
+          <div class="inline-block align-top">
+            <p style="margin: 5rem 0 3rem 0;">Copyright ©2020 ACM UPV Chapter</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+  <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+  <script type="text/javascript" src="src/index.js"></script>
+</html>

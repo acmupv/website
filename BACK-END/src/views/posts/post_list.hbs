@@ -1,0 +1,60 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-12 mx-auto">
+            <div class="card text-center">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12 mx-auto">
+                            <h5><b>Published posts:</b> {{count}} </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        {{#each posts}}
+            <div class="col-md-12">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <p class="m-2">
+                            <img src="{{image_url}}" alt="Image" width="400" height="200">
+                        </p>
+                        <h3 class="m-2 card_title in_row">
+                            <div class="gray">[{{post_type}}]</div> {{title}}
+                        </h3>
+                        <hr>
+                        <p class="m-2 card_body">
+                            {{body}}
+                        </p>
+                        <hr>
+                        <p class="m-1 card_publi">
+                            Posted {{timeago published}} by {{by}}
+                        </p>
+                        <a href="/posts/edit/{{id}}" class="btn btn-secondary">Edit</a>
+                        <div onclick="sure_about({{id}})" class="btn btn-danger">
+                            Delete
+                        </div>
+                        <!-- Button trigger modal -->
+                    </div>
+                </div>
+            </div>
+        {{else}}
+        <div class="col-md-12 mx-auto">
+            <div class="card card-body text-center">
+                <p>There are not posts yet.</p>
+                <a href="/create_post" class="btn btn-primary">Create Post</a>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
+
+<script>
+    // Delete post Script
+    function sure_about(id) {
+        if(confirm("Do you really want to delete this post?")){
+            window.location.href = "/posts/to_delete/" + id
+        }
+    }
+</script>

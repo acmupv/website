@@ -1,0 +1,95 @@
+<div class="container p-4">
+    {{#if posts}}
+        <div class="row">
+            <div class="col-md-12 mx-auto">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-12 mx-auto d-flex justify-content-between">
+                                <h5><b>Items to destroy:</b> [{{count}}]</h5>
+                                <div class="btn btn-danger text-rigth" onclick="delete_all()">Destroy All</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {{else}}
+        <div class="row">
+            <div class="col-md-12 mx-auto">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-12 mx-auto">
+                                <h5><b>Items to destroy</b></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {{/if}}
+
+    <div class="row">
+        {{#each posts}}
+            <div class="col-md-12">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <p class="m-2">
+                            <img src="{{image_url}}" alt="Image" width="400" height="200">
+                        </p>
+                        <h3 class="m-2 card_title in_row">
+                            <div class="gray">[{{post_type}}]</div> {{title}}
+                        </h3>
+                        <hr>
+                        <p class="m-2 card_body">
+                            {{body}}
+                        </p>
+                        <hr>
+                        <p class="m-1 card_publi">
+                            Posted {{timeago published}} by {{by}}
+                        </p>
+                        <div onclick="second_life({{id}})" class="btn btn-success">
+                            Resurrect
+                        </div>
+                        <a href="/posts/edit/{{id}}" class="btn btn-secondary">Edit</a>
+                        <div onclick="sure_about({{id}})" class="btn btn-danger">
+                            Delete
+                        </div>
+                        <!-- Button trigger modal -->
+                    </div>
+                </div>
+            </div>
+        {{else}}
+            <div class="col-md-12 mx-auto">
+                <div class="card card-body text-center">
+                    <img src="/img/icons/spider.png" alt="Spider Web" class="spider_web mx-auto">
+                    <p><b>No deleted posts yet!</b></p>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</div>
+
+<script>
+    // Delete post Script
+    function sure_about(id) {
+        if(confirm("Do you really want to delete this post?")){
+            window.location.href = "/posts/delete/" + id
+        }
+    }
+
+    // Return to good posts
+    function second_life(id) {
+        if(confirm("Do you really want to revive this post?")){
+            window.location.href = "/posts/revive/" + id
+        }
+    }
+
+    // Delete all the posts from deleted list
+    function delete_all() {
+        if(confirm("Do you really want to delete all posts?")){
+            window.location.href = "/posts/delete_all/"
+        }
+    }
+</script>

@@ -1,0 +1,67 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-12 mx-auto">
+            <div class="card text-center">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12 mx-auto">
+                            <h5><b>Proposed Posts </b> {{#if posts}}[{{count}}]{{/if}}</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        {{#each posts}}
+            <div class="col-md-12">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <p class="m-2">
+                            <img src="{{image_url}}" alt="Image" width="400" height="200">
+                        </p>
+                        <h3 class="m-2 card_title">
+                            {{title}}
+                        </h3>
+                        <hr>
+                        <p class="m-2 card_body">
+                            {{body}}
+                        </p>
+                        <p class="m-3 card_publi">
+                            Posted: {{timeago published}} by {{by}}
+                        </p>
+                        <div onclick="publish({{id}})" class="btn btn-success">
+                            Publish
+                        </div>
+                        <a href="/posts/edit/{{id}}" class="btn btn-secondary">Edit</a>
+                        <div onclick="sure_about({{id}})" class="btn btn-danger">
+                            Deny
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {{else}}
+        <div class="col-md-12 mx-auto">
+            <div class="card card-body text-center">
+                <img src="/img/icons/spider.png" alt="Spider Web" class="spider_web mx-auto">
+                <p><b>There are no posts yet!</b></p>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
+<script>
+    // Delete post Script
+    function sure_about(id) {
+        if(confirm("Do you really want to delete this post?")){
+            window.location.href = "/posts/to_delete/" + id
+        }
+    }
+
+    // Publish the post 
+    function publish(id) {
+        if(confirm("Do you want to make public this post?")){
+            window.location.href = "/posts/accept_propose/" + id
+        }
+    }
+</script>

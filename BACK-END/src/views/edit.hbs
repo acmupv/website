@@ -1,0 +1,46 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-10 mx-auto">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Edit Profile</h3>
+                </div>
+                <div class="card-body">
+                    <form action="/profile/edit/{{user.id}}" method="POST" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <center><img src="{{user.image_url}}" alt="IMG" class="profile_img"></center>
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" placeholder="Name" value="{{user.name}}" class="form-control" name="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Description</label>
+                            <textarea type="body" placeholder="Description" rows="3" class="form-control" name="description">{{user.description}}</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">User photo </label>
+                            <input type="file" name="tg_file">
+                        </div>
+                        <hr>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="text" placeholder="Email" value="{{user.email}}" class="form-control" name="email" autofocus>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" placeholder="Password" class="form-control" name="password">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" placeholder="Repeat password" class="form-control" name="password_r">
+                        </div>
+                        <div class="form-group text-center">
+                            <button class="btn btn-success">Update</button>
+                            <a href="/profile" class="btn btn-danger">Cancel</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

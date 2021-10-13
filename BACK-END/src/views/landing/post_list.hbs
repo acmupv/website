@@ -1,0 +1,44 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-12 mx-auto">
+            <div class="card text-center">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12 mx-auto">
+                            <h5><b>Published Content</b></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        {{#each posts}}
+            <div class="col-md-12">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <p class="m-2">
+                            <img src="{{image_url}}" alt="Image" width="400" height="200">
+                        </p>
+                        <h3 class="m-2 card_title">
+                            {{title}}
+                        </h3>
+                        <hr>
+                        <p class="m-2 card_body">
+                            {{body}}
+                        </p>
+                        <p class="m-3 card_publi">
+                            Posted: {{timeago published}} by {{by}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        {{else}}
+        <div class="col-md-12 mx-auto">
+            <div class="card card-body text-center">
+                <p>There are not posts yet.</p>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
